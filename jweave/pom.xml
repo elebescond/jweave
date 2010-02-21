@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>info.elebescond</groupId>
+	<artifactId>MozillaWeaveClient</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>JAVA Mozilla Weave Client</description>
+	<dependencies>
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>5.11</version>
+			<classifier>jdk15</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>1.0</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+	</dependencies>
+</project>
