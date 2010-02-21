@@ -14,9 +14,10 @@ public interface UserWeave {
 	 * @param userId
 	 * @param password
 	 * @param newEmail
+	 * @return
 	 * @throws WeaveException
 	 */
-	public void changeEmail(String userId, String password, String newEmail)
+	public boolean changeEmail(String userId, String password, String newEmail)
 			throws WeaveException;
 
 	/**
@@ -25,9 +26,10 @@ public interface UserWeave {
 	 * @param userId
 	 * @param password
 	 * @param newPassword
+	 * @return
 	 * @throws WeaveException
 	 */
-	public void changePassword(String userId, String password,
+	public boolean changePassword(String userId, String password,
 			String newPassword) throws WeaveException;
 
 	/**
@@ -48,9 +50,10 @@ public interface UserWeave {
 	 * @param userId
 	 * @param password
 	 * @param email
+	 * @return
 	 * @throws WeaveException
 	 */
-	public void createUser(String userId, String password, String email)
+	public boolean createUser(String userId, String password, String email)
 			throws WeaveException;
 
 	/**
@@ -64,9 +67,10 @@ public interface UserWeave {
 	 * @param email
 	 * @param captchaChallenge
 	 * @param captchaResponse
+	 * @return
 	 * @throws WeaveException
 	 */
-	public void createUser(String userId, String password, String email,
+	public boolean createUser(String userId, String password, String email,
 			String captchaChallenge, String captchaResponse)
 			throws WeaveException;
 
@@ -75,9 +79,10 @@ public interface UserWeave {
 	 * 
 	 * @param userId
 	 * @param password
+	 * @return
 	 * @throws WeaveException
 	 */
-	public void deleteUser(String userId, String password)
+	public boolean deleteUser(String userId, String password)
 			throws WeaveException;
 
 	public String getSecret();
@@ -95,6 +100,29 @@ public interface UserWeave {
 	 */
 	public String getUserStorageNode(String userId, String password)
 			throws WeaveException;
+
+	/**
+	 * Requests a password reset email be mailed to the email address on file.
+	 * 
+	 * @param userId
+	 * @return
+	 * @throws WeaveException
+	 */
+	public boolean resetPassword(String userId) throws WeaveException;
+
+	/**
+	 * Requests a password reset email be mailed to the email address on file.
+	 * If a secret is provided, or a captchaChallenge/captchaResponse pair,
+	 * those will be provided as well.
+	 * 
+	 * @param userId
+	 * @param captchaChallenge
+	 * @param captchaResponse
+	 * @return
+	 * @throws WeaveException
+	 */
+	public boolean resetPassword(String userId, String captchaChallenge,
+			String captchaResponse) throws WeaveException;
 
 	public void setSecret(String secret);
 
