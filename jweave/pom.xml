@@ -2,7 +2,7 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>info.elebescond</groupId>
-	<artifactId>MozillaWeaveClient</artifactId>
+	<artifactId>jweave</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>JAVA Mozilla Weave Client</description>
 	<dependencies>
